@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -7,204 +8,217 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>管樂世界｜The World of Wind Music</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
-body{
-  font-family:"Noto Serif TC","Microsoft JhengHei",serif;
-  background:#071426;color:#f5f0e6;line-height:1.8;
+* { box-sizing: border-box; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Noto Serif TC", "Microsoft JhengHei", serif;
+  background: #081525;
+  color: #f5f0e5;
 }
-nav{
-  position:sticky;top:0;z-index:10;
-  display:flex;justify-content:center;flex-wrap:wrap;gap:26px;
-  padding:18px;background:rgba(5,16,31,.94);
-  border-bottom:1px solid #b99a5b;
+header {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(5,17,32,.95);
+  border-bottom: 1px solid #b99a60;
+  padding: 18px 7%;
+  display: flex; justify-content: space-between;
+  align-items: center; flex-wrap: wrap; gap: 15px;
 }
-nav a{color:#e7d5a7;text-decoration:none;font-size:14px;letter-spacing:2px}
-nav a:hover{color:white}
-.hero{
-  min-height:590px;display:flex;align-items:center;justify-content:center;
-  text-align:center;padding:70px 20px;
+.logo { color: #d9bc7d; font-size: 22px; letter-spacing: 4px; }
+nav { display: flex; flex-wrap: wrap; gap: 20px; }
+nav a {
+  color: #eee5d2; text-decoration: none;
+  font-size: 14px; transition: .3s;
+}
+nav a:hover { color: #d9bc7d; }
+.hero {
+  min-height: 590px;
+  display: flex; align-items: center;
+  justify-content: center; text-align: center;
+  padding: 60px 20px;
   background:
-  linear-gradient(rgba(4,14,28,.45),rgba(4,14,28,.88)),
-  url("https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1800&q=85") center/cover;
+    linear-gradient(rgba(4,15,29,.55),rgba(4,15,29,.85)),
+    url("啾.jpg") center/cover no-repeat;
 }
-.hero-content{max-width:800px}
-.eyebrow{color:#d9bb79;letter-spacing:5px;font-size:13px}
-h1{font-size:clamp(42px,8vw,76px);letter-spacing:8px;margin:18px 0;color:#f6e8c5}
-.hero p{font-size:17px;color:#eee4d0;letter-spacing:2px}
-.gold-line{width:75px;height:2px;background:#c7a76a;margin:25px auto}
-section{padding:85px 22px;max-width:1100px;margin:auto}
-.section-title{text-align:center;margin-bottom:40px}
-.section-title small{color:#c8a967;letter-spacing:4px}
-h2{font-size:32px;letter-spacing:5px;color:#f2dfb4;margin-top:8px}
-.intro{text-align:center;max-width:760px;margin:auto;color:#d4d9df}
-.photo-banner{
-  height:280px;border-radius:5px;margin:35px 0;
-  background:linear-gradient(90deg,rgba(4,15,30,.25),rgba(4,15,30,.1)),
-  url("https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1500&q=85") center/cover;
+.hero-content { max-width: 800px; }
+.eyebrow { color: #e0c58e; letter-spacing: 6px; }
+h1 { font-size: clamp(38px,7vw,72px); letter-spacing: 8px; margin: 25px 0; }
+.hero p { font-size: 17px; line-height: 2; color: #eee5d2; }
+.gold-line { width: 75px; height: 2px; background: #d4b36f; margin: 25px auto; }
+section { padding: 90px 8%; }
+.section-title { text-align: center; margin-bottom: 45px; }
+.section-title h2 { color: #dfc48b; font-size: 32px; letter-spacing: 5px; }
+.section-title p { color: #aeb8c5; letter-spacing: 2px; }
+.intro {
+  max-width: 850px; margin: auto; text-align: center;
+  line-height: 2.2; color: #d6dce3; font-size: 16px;
 }
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
-.card{
-  background:#10233a;border:1px solid rgba(201,171,112,.35);
-  padding:27px 23px;border-radius:5px;transition:.3s;
+.photo-feature {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 35px; align-items: center; max-width: 1100px; margin: auto;
 }
-.card:hover{transform:translateY(-5px);border-color:#d7b66f}
-.card .symbol{font-size:38px;margin-bottom:12px}
-.card h3{color:#e7cb8e;font-size:21px;margin-bottom:9px}
-.card p{color:#cbd2dc;font-size:14px}
-.history-box{
-  border-left:2px solid #c5a568;padding:10px 25px;
-  max-width:760px;margin:0 auto;color:#d4d9df;
+.photo-feature img {
+  width: 100%; height: 340px; object-fit: cover;
+  border: 1px solid #b99a60; border-radius: 5px;
 }
-.history-box h3{color:#e7cb8e;margin:15px 0 5px}
-.music-box{
-  text-align:center;background:linear-gradient(135deg,#142b45,#091629);
-  border:1px solid #a98c55;padding:45px 25px;border-radius:5px;
+.photo-text h3 { color: #dfc48b; font-size: 25px; letter-spacing: 3px; }
+.photo-text p { color: #c4ccd5; line-height: 2.1; }
+.dark-section { background: #0d2035; }
+.cards {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 22px; max-width: 1100px; margin: auto;
 }
-.music-box a{
-  display:inline-block;margin-top:20px;padding:10px 25px;
-  border:1px solid #d1b477;color:#e9d6a8;text-decoration:none;
+.card {
+  background: #102941; border: 1px solid #526078;
+  padding: 30px 22px; text-align: center;
+  transition: .3s; border-radius: 5px;
 }
-.music-box a:hover{background:#c5a568;color:#071426}
-footer{
-  text-align:center;padding:30px 15px;color:#aeb8c5;
-  border-top:1px solid rgba(201,171,112,.3);font-size:13px;
+.card:hover { transform: translateY(-6px); border-color: #d4b36f; }
+.instrument { font-size: 43px; margin-bottom: 12px; }
+.card h3 { color: #dfc48b; letter-spacing: 3px; }
+.card p { color: #c4ccd5; line-height: 1.9; font-size: 14px; }
+.music-box {
+  max-width: 850px; margin: auto; text-align: center;
+  padding: 45px 25px; border: 1px solid #b99a60;
 }
-@media(max-width:600px){
- nav{gap:13px;padding:14px 8px}
- nav a{font-size:12px}
- section{padding:60px 18px}
- .hero{min-height:480px}
+.music-box p { color: #c4ccd5; line-height: 2; }
+.music-box a {
+  display: inline-block; margin-top: 18px;
+  color: #081525; background: #d9bc7d;
+  padding: 13px 28px; text-decoration: none;
+}
+footer {
+  text-align: center; padding: 35px 15px;
+  color: #aeb8c5; border-top: 1px solid #66583f;
+  letter-spacing: 2px; font-size: 13px;
+}
+@media(max-width:700px) {
+  header { justify-content: center; }
+  nav { justify-content: center; gap: 13px; }
+  .photo-feature { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr; }
+  section { padding: 65px 7%; }
+  .hero { min-height: 480px; }
 }
 </style>
 </head>
 <body>
 
-<nav>
-  <a href="#home">首頁 HOME</a>
-  <a href="#history">管樂歷史</a>
-  <a href="#woodwind">木管樂器</a>
-  <a href="#brass">銅管樂器</a>
-  <a href="#music">音樂欣賞</a>
-</nav>
-
-<header class="hero" id="home">
-  <div class="hero-content">
-    <div class="eyebrow">THE WORLD OF WIND MUSIC</div>
-    <div class="gold-line"></div>
-    <h1>管 樂 世 界</h1>
-    <p>讓每一道旋律，成為心中最美的風景</p>
-    <div class="gold-line"></div>
-  </div>
+<header>
+  <div class="logo">🎼 管樂世界</div>
+  <nav>
+    <a href="#home">首頁</a>
+    <a href="#about">管樂介紹</a>
+    <a href="#woodwind">木管樂器</a>
+    <a href="#brass">銅管樂器</a>
+    <a href="#music">音樂欣賞</a>
+  </nav>
 </header>
 
-<section>
+<div class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow">THE WORLD OF WIND MUSIC</div>
+    <h1>讓音樂，乘風而起</h1>
+    <div class="gold-line"></div>
+    <p>每一道旋律，都是心中最美的風景。<br>
+    在管樂的世界裡，遇見聲音與靈魂的共鳴。</p>
+  </div>
+</div>
+
+<section id="about">
   <div class="section-title">
-    <small>WELCOME</small>
-    <h2>走進管樂的世界</h2>
+    <h2>ABOUT WIND BAND</h2>
+    <p>認識管樂團</p>
   </div>
   <p class="intro">
-    管樂，是由不同樂器交織而成的聲音藝術。
-    從溫柔細膩的木管，到明亮有力的銅管，
-    每一種音色都有自己的故事。
-    讓我們一起認識管樂，感受音樂帶來的感動。
+    管樂團是一群熱愛音樂的人，透過不同樂器的聲音交織而成的團體。
+    從輕柔的木管旋律，到明亮有力的銅管聲響，
+    每個聲部都扮演著重要的角色。
+    當大家一起演奏，就能創造出令人感動的音樂。
   </p>
-  <div class="photo-banner"></div>
 </section>
 
-<section id="history">
-  <div class="section-title">
-    <small>OUR STORY</small>
-    <h2>管樂的歷史</h2>
-  </div>
-  <div class="history-box">
-    <h3>從古老樂器到現代樂團</h3>
-    <p>管樂器的歷史十分悠久。早期人們利用木材、骨頭與金屬製作簡單的吹奏樂器，逐漸發展出不同種類與音色。</p>
-    <h3>管樂團的發展</h3>
-    <p>隨著樂器製作技術進步，管樂團逐漸形成。不同樂器分工合作，演奏出豐富而壯闊的音樂。</p>
-    <h3>今日的管樂</h3>
-    <p>現代管樂團活躍於學校、音樂廳與各種表演活動，透過合奏展現團隊合作與音樂魅力。</p>
+<section class="dark-section">
+  <div class="photo-feature">
+    <img src="啾啾.jpg" alt="管樂音樂主題照片">
+    <div class="photo-text">
+      <h3>不只是演奏，更是默契</h3>
+      <p>
+        管樂團最迷人的地方，在於每個人都能用自己的聲音，
+        成為整體音樂的一部分。
+        練習、合作與舞台上的每一刻，
+        都讓旋律變得更加珍貴。
+      </p>
+    </div>
   </div>
 </section>
 
 <section id="woodwind">
   <div class="section-title">
-    <small>WOODWIND</small>
-    <h2>木管樂器</h2>
+    <h2>WOODWIND</h2>
+    <p>木管樂器</p>
   </div>
-  <p class="intro">木管樂器擁有多變而細膩的音色，能呈現溫柔、明亮或靈動的旋律。</p>
-  <div class="cards" style="margin-top:30px">
+  <div class="cards">
     <div class="card">
-      <div class="symbol">🪈</div>
-      <h3>長笛 Flute</h3>
-      <p>音色清澈明亮，常演奏優美流暢的高音旋律。</p>
+      <div class="instrument">🪈</div>
+      <h3>長笛</h3>
+      <p>音色清澈明亮，常帶來輕盈優美的旋律。</p>
     </div>
     <div class="card">
-      <div class="symbol">🎶</div>
-      <h3>豎笛 Clarinet</h3>
-      <p>音域寬廣，音色溫暖，可以呈現豐富的音樂表情。</p>
+      <div class="instrument">🎶</div>
+      <h3>單簧管</h3>
+      <p>音域寬廣，能呈現溫柔又富有表情的聲音。</p>
     </div>
     <div class="card">
-      <div class="symbol">🎷</div>
-      <h3>薩克斯風 Saxophone</h3>
-      <p>音色富有特色，既能柔和抒情，也能熱情奔放。</p>
-    </div>
-    <div class="card">
-      <div class="symbol">🎵</div>
-      <h3>雙簧管 Oboe</h3>
-      <p>音色集中而富有穿透力，常帶有優雅細緻的特色。</p>
+      <div class="instrument">🎷</div>
+      <h3>薩克斯風</h3>
+      <p>音色溫暖有魅力，在古典與爵士中都很迷人。</p>
     </div>
   </div>
 </section>
 
-<section id="brass">
+<section class="dark-section" id="brass">
   <div class="section-title">
-    <small>BRASS</small>
-    <h2>銅管樂器</h2>
+    <h2>BRASS</h2>
+    <p>銅管樂器</p>
   </div>
-  <p class="intro">銅管樂器以明亮、宏亮的音色著稱，為樂團帶來力量與氣勢。</p>
-  <div class="cards" style="margin-top:30px">
+  <div class="cards">
     <div class="card">
-      <div class="symbol">🎺</div>
-      <h3>小號 Trumpet</h3>
-      <p>音色明亮突出，常負責充滿精神與活力的旋律。</p>
+      <div class="instrument">🎺</div>
+      <h3>小號</h3>
+      <p>聲音明亮嘹亮，常負責充滿力量的旋律。</p>
     </div>
     <div class="card">
-      <div class="symbol">🎺</div>
-      <h3>長號 Trombone</h3>
-      <p>利用伸縮管改變音高，音色渾厚而富有力量。</p>
+      <div class="instrument">📯</div>
+      <h3>法國號</h3>
+      <p>音色圓潤柔和，能為樂曲增添溫暖層次。</p>
     </div>
     <div class="card">
-      <div class="symbol">📯</div>
-      <h3>法國號 French Horn</h3>
-      <p>音色圓潤溫暖，能連接木管與銅管的聲音。</p>
-    </div>
-    <div class="card">
-      <div class="symbol">🎼</div>
-      <h3>低音號 Tuba</h3>
-      <p>提供厚實的低音基礎，讓整個樂團更加穩定。</p>
+      <div class="instrument">🎺</div>
+      <h3>長號</h3>
+      <p>具有鮮明的音色與滑音特色，表現力十足。</p>
     </div>
   </div>
 </section>
 
 <section id="music">
   <div class="section-title">
-    <small>MUSIC & INSPIRATION</small>
-    <h2>音樂欣賞</h2>
+    <h2>MUSIC APPRECIATION</h2>
+    <p>音樂欣賞</p>
   </div>
   <div class="music-box">
-    <h3 style="color:#ead6a6;font-size:24px">讓我們一起聆聽管樂</h3>
-    <p style="color:#d0d7df;margin-top:12px">
-      戴上耳機，感受不同樂器交織而成的美妙樂章。
+    <h3 style="color:#dfc48b;letter-spacing:4px;">讓耳朵去旅行</h3>
+    <p>
+      找一個舒服的時刻，戴上耳機，<br>
+      感受管樂交織出的層次與情感。
     </p>
-    <a href="https://www.youtube.com/results?search_query=wind+band+concert" target="_blank" rel="noopener">
-      探索管樂演奏 →
-    </a>
+    <a href="https://www.youtube.com/results?search_query=wind+band+concert"
+       target="_blank" rel="noopener">探索管樂演奏 ▶</a>
   </div>
 </section>
 
 <footer>
-  <p>THE WORLD OF WIND MUSIC</p>
-  <p>用音樂連結彼此，讓旋律持續飛翔。</p>
+  THE WORLD OF WIND MUSIC<br><br>
+  用音樂相遇，讓旋律留下回憶 © 2026
 </footer>
 
 </body>
